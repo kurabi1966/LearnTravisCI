@@ -17,7 +17,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Application Version 2 By Ammar Kurabi
+            Application Version 3 By.
           </a>
         </header>
       </div>
