@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t kurabi/LearnTravisCI -f Dockerfile.dev .
+
+script:
+  - docker run kurabi/LearnTravisCI npm run test -- --coverage
