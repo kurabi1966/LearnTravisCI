@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run kurabi/learntravisci npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "learntravisci"
+  env: "Learntravisci-env"
+  bucket_name: "elasticbeanstalk-us-east-2-628639610162"
+  bucket_path: "learntravisci"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
